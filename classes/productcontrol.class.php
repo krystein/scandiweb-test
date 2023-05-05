@@ -29,11 +29,13 @@ class ProductControl extends Product
     public function removeProduct($inputArray)
     {
         foreach ($inputArray as $key => $val) {
-            $sku = "";
+            $sn = "";
             if ($key !== "submit") {
-                $sku = $key;
+                $sn = $key;
+            } else {
+                continue;
             }
-            $this->delete($sku);
+            $this->delete($sn);
         }
     }
     private function validate()

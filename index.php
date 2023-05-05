@@ -43,7 +43,7 @@ $allproducts = $products->showProducts();
                     ?>
                 <div class="col-sm col-md col-lg card container p-3">
                     <div class="d-flex justify-content-left">
-                        <input type="checkbox" class="delete-checkbox" name="<?php echo $product['sku'] ?>" />
+                        <input type="checkbox" class="delete-checkbox" name="<?php echo $product['sn'] ?>" />
                     </div>
                     <h2 class="text-uppercase">
                         <?php echo $product['sku']; ?>

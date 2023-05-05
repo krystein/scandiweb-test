@@ -6,11 +6,11 @@ class Product extends Dbh
     {
         return $this->connect()->query("SELECT * FROM  products");
     }
-    protected function delete($sku)
+    protected function delete($sn)
     {
-        $stmt = $this->connect()->prepare("DELETE FROM products WHERE sku = ?;");
+        $stmt = $this->connect()->prepare("DELETE FROM products WHERE sn = ?;");
 
-        if (!$stmt->execute(array($sku))) {
+        if (!$stmt->execute(array($sn))) {
             $stmt = null;
             header("location: ../index.php?error=stmt an Error occured!");
             exit();
